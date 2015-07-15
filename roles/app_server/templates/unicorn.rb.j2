@@ -7,8 +7,8 @@ stdout_path '{{ app_path }}/log/unicorn.log'
 
 preload_app true
 
-# Restart any workers that haven't responded in 30 seconds
-timeout 30
+# BWI: changed from 30 to 60
+timeout 60
 
 listen "{{ unicorn_sockfile }}"
 
